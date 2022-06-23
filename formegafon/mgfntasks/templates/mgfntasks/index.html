@@ -1,0 +1,91 @@
+{% extends 'mgfntasks/base.html' %}
+
+{% block section %}
+        <section class='content-info'>
+            <section class='content-info-item'>
+                <section class='item-desc'>
+                    <h3>Задание 1</h3>
+                    <p>Входные данные: размер ипотечного кредита, процентная ставка, кол-во лет. Найти переплату по кредиту.</p>
+                </section>
+                <a href="{% url 'loan' %}" class="solution">Решение</a>
+            </section>
+            <section class='content-info-item'>
+                <section class='item-desc'>
+                    <h3>Задание 2</h3>
+                    <p>Дан файл text.txt в котором содержится произвольный текст. Необходимо написать:</p>
+                    <ul class='item-ul'>
+                        <li>решение, которое будет шифровать данный файл, создавая новый файл text_encrypted.txt</li>
+                        <li>решение которое будет расшифровывать файл и создавать новый расшифрованный файл text_decrypted.txt</li>
+                    </ul>
+                    <p>Методы шифрования на ваше усмотрение. Текст до шифрования и после расшифровки должен быть одинаковым.
+                        В описании решения укажите какой метод шифрования используется.</p>
+                </section>
+                <a href="{% url 'crypt' %}" class="solution">Решение</a>
+            </section>
+            <section class='content-info-item'>
+                <section class='item-desc'>
+                    <h3>Задание 3</h3>
+                    <p>Напишите функцию, которая в зависимости от переданного в нее целочисленного аргумента, 
+                    будет выводить слово «товар» в нужно форме («12 товаров», но «22 товара»).</p>
+                </section>
+                <a href="{% url 'products' %}" class="solution">Решение</a>
+            </section>
+            <section class='content-info-item'>
+                <section class='item-desc'>
+                    <h3>Задание 4</h3>
+                    <p>Дана спираль:</p>
+                    <table class='item-table'>
+                        <tr>
+                          <td>21</td>
+                          <td>22</td>
+                          <td>23</td>
+                          <td>24</td>
+                          <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>6</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>16</td>
+                            <td>15</td>
+                            <td>14</td>
+                            <td>13</td>
+                        </tr>
+                    </table>
+                    <p>Сумма чисел диагоналей = 101. Вычислить сумму чисел диагоналей спирали 1001х1001.</p>
+                </section>
+                <a href="{% url 'spiral' %}" class="solution">Решение</a>
+            </section>
+            <section class='content-info-item'>
+                <section class='item-desc'>
+                    <h3>Задание 5</h3>
+                    <p>Написать web-приложение для управления электронной библиотекой. Приложение должно уметь:</p>
+                    <ul class='item-ul'>
+                        <li>искать книги по автору или названию</li>
+                        <li>управлять списком книг: добавить/редактировать/удалить книгу</li>
+                        <li>управлять списком авторов: добавить/редактировать/удалить автора</li>
+                    </ul>
+                    <p>Связь между книгами и авторами - многие ко многим.</p>
+                </section>
+            </section>
+        </section>
+{% endblock %}

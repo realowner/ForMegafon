@@ -1,0 +1,21 @@
+{% extends 'mgfntasks/base.html' %}
+
+{% block section %}
+    <section class='content-info'>
+        <section class='content-info-item'>
+            <form action="{% url 'crypt' %}" method="post" class='content-form' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class='form-btn'>Выполнить</button>
+            </form>
+        </section>
+        {% if result %}
+            <section class='content-info-item'>
+                <section>
+                    <p style="margin-bottom: 20px">Выполнено успешно! Посмотреть результат и скачать как файл можно по ссылке:</p>
+                    <a href="{{ result }}" class="solution" target="_blank">Результат</a>
+                </section>
+            </section>
+        {% endif %}
+    </section>
+{% endblock %}

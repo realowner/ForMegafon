@@ -1,0 +1,20 @@
+{% extends 'mgfntasks/base.html' %}
+
+{% block section %}
+    <section class='content-info'>
+        <section class='content-info-item'>
+            <form action="{% url 'spiral' %}" method="post" class='content-form'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class='form-btn'>Вычислить</button>
+            </form>
+        </section>
+        {% if result %}
+            <section class='content-info-item'>
+                <section>
+                    <p>Сумма спирали {{ size }}x{{ size }}: {{ result }}</p>
+                </section>
+            </section>
+        {% endif %}
+    </section>
+{% endblock %}

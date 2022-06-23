@@ -1,0 +1,22 @@
+{% extends 'mgfntasks/base.html' %}
+
+{% block section %}
+    <section class='content-info'>
+        <section class='content-info-item'>
+            <form action="{% url 'loan' %}" method="post" class='content-form'>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class='form-btn'>Вычислить</button>
+            </form>
+        </section>
+        {% if result %}
+            <section class='content-info-item'>
+                <section>
+                    <p>Ежемесячный платеж: {{ result.annuity_payment }} руб</p>
+                    <p>Сумма с переплатой: {{ result.debt_including_overpayment }} руб</p>
+                    <p>Переплата: {{ result.overpayment_summ }} руб</p>
+                </section>
+            </section>
+        {% endif %}
+    </section>
+{% endblock %}

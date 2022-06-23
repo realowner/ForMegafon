@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    height: 80px;
+    background-color: rgb(79, 182, 65);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 25px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-link {
+    margin-left: 10px;
+    background-color: rgb(117, 63, 168);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.main-link:hover {
+    background-color: rgb(141, 86, 192);
+
+}
+
+.git-link {
+    margin-left: 10px;
+    background-color: rgb(117, 63, 168);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.git-link:hover {
+    background-color: rgb(141, 86, 192);
+}
+
+.content {
+    width: 85%;
+    margin: 50px auto;
+}
+
+.content-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-info-item {
+    background-color: rgb(238, 255, 236);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.content-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-btn {
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(117, 63, 168);
+    color: white;
+}
+.form-btn:hover {
+    background-color: rgb(141, 86, 192);
+}
+
+.item-ul {
+    margin-left: 50px;
+}
+
+.item-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.item-table tr, td{
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.solution {
+    background-color: rgb(117, 63, 168);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.solution:hover {
+    background-color: rgb(141, 86, 192);
+}

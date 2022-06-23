@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'mgfntasks\css\styles.css' %}">
+    <title>Megafon</title>
+</head>
+<body>
+    <header class='header'>
+        <div class='header-left'>
+            <h2>Тестовое задание | Megafon</h2>
+            <a href="{% url 'index' %}" class='main-link'>Главная</a>
+        </div>
+        <div class='header-right'>
+            <p>23.06.2022 EvSE</p>
+            <a href="https://github.com/realowner" class='git-link'>GitHub</a>
+        </div>
+    </header>
+
+    <section class='content'>
+    {% block section %}{% endblock %}
+    </section>
+    
+</body>
+</html>
