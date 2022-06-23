@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'mgfntasks\css\styles.css' %}">
+    <link rel="stylesheet" href="{% static 'eleclibrary\css\styles.css' %}">
     <title>Megafon</title>
 </head>
 <body>
@@ -11,6 +11,7 @@
         <div class='header-left'>
             <h2>Тестовое задание | Megafon</h2>
             <a href="/" class='main-link'>Главная</a>
+            <a href="{% url 'index' %}" class='main-link'>Библиотека</a>
         </div>
         <div class='header-right'>
             <p>23.06.2022 EvSE</p>

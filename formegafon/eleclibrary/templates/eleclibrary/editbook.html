@@ -1,0 +1,13 @@
+{% extends 'eleclibrary/base.html' %}
+
+{% block section %}
+        <section class='content-info libr'>
+            <section class='content-info-item'>
+                <form action="{% url 'editbook' book.id %}" method="post" class='content-form'>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class='big-btn mgt'>Сохранить</button>
+                </form>
+            </section>
+        </section>
+{% endblock %}

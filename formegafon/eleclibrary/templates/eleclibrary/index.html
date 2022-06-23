@@ -1,0 +1,36 @@
+{% extends 'eleclibrary/base.html' %}
+
+{% block section %}
+        <section class='content-info libr'>
+            <section class='content-info-item author'>
+                <a href="{% url 'addauthor' %}" class="big-btn">Добавить</a>
+                {% for author in authors %}
+                    <section class='item'>
+                        <section class='item-desc'>
+                            <h3>{{ author.full_name }}</h3>
+                            <p class='desc'>{{ author.country }}</p>
+                        </section>
+                        <section class='item-links'>
+                            <a href="{% url 'editauthor' author.id %}" class="little-btn">Редактировать</a>
+                            <a href="{% url 'deleteauthor' author.id %}" class="little-btn">Удалить</a>
+                        </section>
+                    </section>
+                {% endfor %}
+            </section>
+            <section class='content-info-item'>
+                <a href="{% url 'addbook' %}" class="big-btn">Добавить</a>
+                {% for book in books %}
+                    <section class='item'>
+                        <section class='item-desc'>
+                            <h3>{{ book.title }}</h3>
+                            <p class='desc'>{{ book.desc }}</p>
+                        </section>
+                        <section class='item-links'>
+                            <a href="{% url 'editbook' book.id %}" class="little-btn">Редактировать</a>
+                            <a href="{% url 'deletebook' book.id %}" class="little-btn">Удалить</a>
+                        </section>
+                    </section>
+                {% endfor %}
+            </section>
+        </section>
+{% endblock %}
